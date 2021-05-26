@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="626.0" prefWidth="1037.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Button layoutX="905.0" layoutY="262.0" mnemonicParsing="false" text="Lancer les dés" />
+      <Button layoutX="904.0" layoutY="326.0" mnemonicParsing="false" text="Joueur suivant" />
+      <ImageView fx:id="color1" fitHeight="69.0" fitWidth="79.0" layoutX="421.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dice_green.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="color2" fitHeight="69.0" fitWidth="79.0" layoutX="528.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dice_yellow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="color3" fitHeight="69.0" fitWidth="79.0" layoutX="639.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dice_red.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dice1" layoutX="443.0" layoutY="407.0" text="8">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="dice2" layoutX="550.0" layoutY="407.0" text="8">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="dice3" layoutX="661.0" layoutY="407.0" text="8">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="namePlayer" layoutX="72.0" layoutY="96.0" text="Joueur : " />
+      <ImageView fx:id="color11" fitHeight="69.0" fitWidth="79.0" layoutX="422.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dice_green.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="color111" fitHeight="69.0" fitWidth="79.0" layoutX="528.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dice_green.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="color1111" fitHeight="69.0" fitWidth="79.0" layoutX="646.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dice_green.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="diceChoose1" blendMode="COLOR_BURN" fitHeight="48.0" fitWidth="45.0" layoutX="433.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/brain.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="diceChoose2" blendMode="COLOR_BURN" fitHeight="48.0" fitWidth="45.0" layoutX="540.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/brain.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="diceChoose3" blendMode="COLOR_BURN" fitHeight="48.0" fitWidth="45.0" layoutX="658.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/brain.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
