@@ -7,10 +7,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="626.0" prefWidth="1037.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane prefHeight="570.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <Button layoutX="905.0" layoutY="262.0" mnemonicParsing="false" text="Lancer les dés" />
-      <Button layoutX="904.0" layoutY="326.0" mnemonicParsing="false" text="Joueur suivant" />
+      <ImageView fitHeight="587.0" fitWidth="1098.0" layoutX="-63.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/walpaper2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="270.0" layoutX="526.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="433.0" layoutY="526.0" mnemonicParsing="false" onAction="#launchDice" text="Lancer les dés" />
+      <Button layoutX="563.0" layoutY="526.0" mnemonicParsing="false" onAction="#changePlayer" text="Joueur suivant" />
       <ImageView fx:id="color1" fitHeight="69.0" fitWidth="79.0" layoutX="421.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/dice_green.png" />
@@ -41,18 +51,21 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="namePlayer" layoutX="72.0" layoutY="96.0" text="Joueur : " />
-      <ImageView fx:id="color11" fitHeight="69.0" fitWidth="79.0" layoutX="422.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="namePlayer" layoutX="72.0" layoutY="96.0" text="Joueur : " textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font></Label>
+      <ImageView fx:id="colorChoose1" fitHeight="69.0" fitWidth="79.0" layoutX="422.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/dice_green.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="color111" fitHeight="69.0" fitWidth="79.0" layoutX="528.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="colorChoose2" fitHeight="69.0" fitWidth="79.0" layoutX="528.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/dice_green.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="color1111" fitHeight="69.0" fitWidth="79.0" layoutX="646.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="colorChoose3" fitHeight="69.0" fitWidth="79.0" layoutX="639.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/dice_green.png" />
          </image>
@@ -67,10 +80,60 @@
             <Image url="@images/brain.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="diceChoose3" blendMode="COLOR_BURN" fitHeight="48.0" fitWidth="45.0" layoutX="658.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="diceChoose3" blendMode="COLOR_BURN" fitHeight="48.0" fitWidth="45.0" layoutX="651.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/brain.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="108.0" fitWidth="69.0" layoutX="54.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/brain.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="scoreBrain" layoutX="166.0" layoutY="282.0" text="0" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="108.0" fitWidth="69.0" layoutX="54.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/shotgun.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="scoreShotGun" layoutX="166.0" layoutY="388.0" text="0" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1101.0" layoutY="28.0" text="Scores ">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="score1" layoutX="1059.0" layoutY="122.0" text="Joueur 1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="score2" layoutX="1059.0" layoutY="160.0" text="Joueur 1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="score3" layoutX="1059.0" layoutY="200.0" text="Joueur 1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="score4" layoutX="1059.0" layoutY="240.0" text="Joueur 1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="score5" layoutX="1059.0" layoutY="279.0" text="Joueur 1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

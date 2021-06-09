@@ -10,8 +10,20 @@ public class Game {
     private Integer nPlayer = null;
     private ArrayList<Player> players = new ArrayList<>();
     private Difficulty difficulty;
-
     private Cup cup;
+
+
+    public void changePlayer() {
+        if (actualPlayer == players.size() -1){
+            actualPlayer=0;
+        }
+        else {
+            actualPlayer++;
+        }
+        System.out.println(actualPlayer);
+        cup.reset();
+    }
+
 
     public void setnPlayer(Integer nPlayer) {
         this.nPlayer = nPlayer;
@@ -21,7 +33,7 @@ public class Game {
         return nPlayer;
     }
 
-    public void addPlayer(Player player){
+    public void addPlayer(Player player) {
         players.add(player);
     }
 
@@ -45,4 +57,18 @@ public class Game {
     public Integer getActualPlayer() {
         return actualPlayer;
     }
+
+    public void setCup(Cup cup) {
+        this.cup = cup;
+    }
+
+    public Cup getCup() {
+        return cup;
+    }
+
+    public Player getCurrentPlayer() {
+        return players.get(actualPlayer);
+    }
+
+
 }

@@ -43,4 +43,8 @@ public class Dice {
             DiceFaces item = faces.get(index);
             return item;
     }
+
+    public String getColor() {
+        return color;
+    }
 }

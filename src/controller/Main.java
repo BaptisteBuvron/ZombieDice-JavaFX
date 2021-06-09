@@ -11,19 +11,21 @@ public class Main extends Application {
 
     public static Stage acceuil;
     public static Stage main;
-    public static Game game;
+    public static Game game = new Game();
 
     @Override
     public void start(Stage ps) throws Exception{
-        game = new Game();
         main = new Stage();
-        Parent mainRoot = FXMLLoader.load(getClass().getResource("../ressource/main.fxml"));
+        Parent mainRoot = FXMLLoader.load(getClass().getResource("/ressource/main.fxml"));
         main.setTitle("Zombie Dice");
-        main.setScene(new Scene(mainRoot,900,700));
-        Parent root = FXMLLoader.load(getClass().getResource("../ressource/acceuil.fxml"));
+        Scene scene = new Scene(mainRoot,1300,570);
+        main.setScene(scene);
+        main.setResizable(false);
+        Parent root = FXMLLoader.load(getClass().getResource("/ressource/acceuil.fxml"));
         this.acceuil = ps;
         acceuil.setTitle("Acceuil");
-        acceuil.setScene(new Scene(root, 900, 700));
+        acceuil.setScene(new Scene(root, 900, 570));
+        acceuil.setResizable(false);
         acceuil.show();
     }
 

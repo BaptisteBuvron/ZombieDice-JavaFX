@@ -6,32 +6,38 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
    <children>
-      <Label layoutX="350.0" layoutY="104.0" prefHeight="17.0" prefWidth="179.0" text="Zombie Dice" textAlignment="CENTER">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <Label layoutX="27.0" layoutY="224.0" prefHeight="17.0" prefWidth="69.0" text="Difficulté" />
-      <RadioButton layoutX="173.0" layoutY="224.0" mnemonicParsing="false" selected="true" text="Facile">
+      <ImageView fitHeight="615.0" fitWidth="1038.0" layoutX="-83.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/walpaper2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="153.0" fitWidth="297.0" layoutX="336.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="224.0" prefHeight="17.0" prefWidth="69.0" text="Difficulté" textFill="WHITE" />
+      <RadioButton layoutX="173.0" layoutY="224.0" mnemonicParsing="false" selected="true" text="Facile" textFill="WHITE">
          <toggleGroup>
-            <ToggleGroup fx:id="difficulté" />
+            <ToggleGroup fx:id="difficulte" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="413.0" layoutY="224.0" mnemonicParsing="false" text="Moyen" toggleGroup="$difficulté" />
-      <RadioButton layoutX="620.0" layoutY="224.0" mnemonicParsing="false" text="Difficile" toggleGroup="$difficulté" />
+      <RadioButton layoutX="413.0" layoutY="224.0" mnemonicParsing="false" text="Moyen" textFill="WHITE" toggleGroup="$difficulte" />
+      <RadioButton layoutX="620.0" layoutY="224.0" mnemonicParsing="false" text="Difficile" textFill="WHITE" toggleGroup="$difficulte" />
       <TextField fx:id="numberPlayer" layoutX="173.0" layoutY="279.0" />
-      <Label layoutX="27.0" layoutY="283.0" text="Nombre joueurs (2à5)" />
+      <Label layoutX="27.0" layoutY="283.0" text="Nombre joueurs (2à5)" textFill="WHITE" />
       <Button fx:id="play" layoutX="785.0" layoutY="526.0" mnemonicParsing="false" onAction="#play" text="Jouer" />
       <ListView fx:id="listNamePlayer" layoutX="471.0" layoutY="358.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="27.0" layoutY="349.0" text="Noms des joueurs" />
+      <Label layoutX="27.0" layoutY="349.0" text="Noms des joueurs" textFill="WHITE" />
       <TextField fx:id="namePlayer" layoutX="173.0" layoutY="345.0" />
       <Button fx:id="validNamePlayer" layoutX="361.0" layoutY="345.0" mnemonicParsing="false" onAction="#validNamePlayer" text="Valider" />
       <Button fx:id="validNPlayer" layoutX="361.0" layoutY="279.0" mnemonicParsing="false" onAction="#validNPlayer" text="Valider" />
-      <Label fx:id="error" layoutX="17.0" layoutY="530.0" />
+      <Label fx:id="error" layoutX="17.0" layoutY="530.0" textFill="WHITE" />
    </children>
 </AnchorPane>
